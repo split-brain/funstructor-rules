@@ -35,10 +35,10 @@ Rules based on a simple grammar contain
   - LPAREN `(`
   - RPAREN `)`
   - DEFN `defn`
-  - <ID> `<id>` (after playing this card you can type the name of id)
+  - `<id>` (after playing this card you can type the name of id)
   - LSQUARE `[`
   - RSQUARE `]`
-  - <NUM> `<num>` (after playing this card you can type the int number)
+  - `<num>` (after playing this card you can type the int number)
 * **Non-terminal**
   - `[*]` (expand non-terminal using the rule)
   - `[-]` (collapse non-terminal)
@@ -63,9 +63,9 @@ function using following rules step-by-step
 - `(` `defn` `<id>` `[` `<id>`* `]` **FORM** `)`
   - LPAREN
   - DEFN
-  - <ID> :even?
+  - `<id>`:even?
   - LSQUARE
-  - <ID> :x
+  - `<id>`:x
   - RSQUARE
   - RPAREN
 - `(` `defn` `even?` `[` `x` `<id>*` `]` **FORM** `)`
@@ -73,7 +73,7 @@ function using following rules step-by-step
 - `(` `defn` `even?` `[` `x` `]` **FORM** `)`
   - `[*]` Expand **FORM**
 - `(` `defn` `even?` `[` `x` `]` `(` `<id>` **ARG***`)` `)`
-  - <ID> :zero?
+  - `<id>`:zero?
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` **ARG***`)` `)`
   - Expand `[*]` **ARG** -> **FORM**
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` **FORM** **ARG***`)` `)`
@@ -81,7 +81,7 @@ function using following rules step-by-step
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` **FORM** `)` `)`
   - Expand `[*]` **FORM**
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` `(` `<id>` **ARG*** `)` `)` `)`
-  - <ID> :mod
+  - `<id>`:mod
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` `(` `mod` **ARG*** `)` `)` `)`
   - Expand `[*]` **ARG** -> `<id>`
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` `(` `mod` `<id>` **ARG*** `)` `)` `)`
@@ -89,8 +89,8 @@ function using following rules step-by-step
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` `(` `mod` `<id>` `<num>` **ARG*** `)` `)` `)`
   - `[#]` Stop multielement **ARG***
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` `(` `mod` `<id>` `<num>` `)` `)` `)`
-  - <ID> :x
-  - <NUM> :2
+  - `<id>`:x
+  - `<num>`:2
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` `(` `mod` `x` `2` `)` `)` `)`
 
 Construction is done!
