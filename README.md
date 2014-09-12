@@ -63,9 +63,9 @@ function using following rules step-by-step
 - `(` `defn` `<id>` `[` `<id>`* `]` **FORM** `)`
   - LPAREN
   - DEFN
-  - <ID>:even?
+  - <ID> :even?
   - LSQUARE
-  - <ID>:x
+  - <ID> :x
   - RSQUARE
   - RPAREN
 - `(` `defn` `even?` `[` `x` `<id>*` `]` **FORM** `)`
@@ -73,7 +73,7 @@ function using following rules step-by-step
 - `(` `defn` `even?` `[` `x` `]` **FORM** `)`
   - `[*]` Expand **FORM**
 - `(` `defn` `even?` `[` `x` `]` `(` `<id>` **ARG***`)` `)`
-  - <ID>:zero?
+  - <ID> :zero?
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` **ARG***`)` `)`
   - Expand `[*]` **ARG** -> **FORM**
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` **FORM** **ARG***`)` `)`
@@ -81,7 +81,7 @@ function using following rules step-by-step
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` **FORM** `)` `)`
   - Expand `[*]` **FORM**
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` `(` `<id>` **ARG*** `)` `)` `)`
-  - <ID>:mod
+  - <ID> :mod
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` `(` `mod` **ARG*** `)` `)` `)`
   - Expand `[*]` **ARG** -> `<id>`
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` `(` `mod` `<id>` **ARG*** `)` `)` `)`
@@ -89,8 +89,8 @@ function using following rules step-by-step
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` `(` `mod` `<id>` `<num>` **ARG*** `)` `)` `)`
   - `[#]` Stop multielement **ARG***
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` `(` `mod` `<id>` `<num>` `)` `)` `)`
-  - <ID>:x
-  - <NUM>:2
+  - <ID> :x
+  - <NUM> :2
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` `(` `mod` `x` `2` `)` `)` `)`
 
 Construction is done!
