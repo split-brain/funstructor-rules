@@ -40,11 +40,11 @@ Rules based on a simple grammar contain
   - RSQUARE `]`
   - <NUM> `<num>` (after playing this card you can type the int number)
 * **Non-terminal**
-  - [*] (expand non-terminal using the rule)
-  - [-] (collapse non-terminal)
-  - [.] (delete terminal)
-  - [X] (delete non-terminal)
-  - [#] (stop multielement)
+  - `[*]` (expand non-terminal using the rule)
+  - `[-]` (collapse non-terminal)
+  - `[.]` (delete terminal)
+  - `[X]` (delete non-terminal)
+  - `[#]` (stop multielement)
 
 ## Example
 
@@ -59,7 +59,7 @@ Starting with non-terminal **F** we could build the
 function using following rules step-by-step
 
 - **F**
-  - Expand [*] **F**
+  - Expand `[*]` **F**
 - `(` `defn` `<id>` `[` `<id>`* `]` **FORM** `)`
   - LPAREN
   - DEFN
@@ -69,31 +69,31 @@ function using following rules step-by-step
   - RSQUARE
   - RPAREN
 - `(` `defn` `even?` `[` `x` `<id>*` `]` **FORM** `)`
-  - [#] Stop multielement `<id>*`
+  - `[#]` Stop multielement `<id>*`
 - `(` `defn` `even?` `[` `x` `]` **FORM** `)`
-  - [*] Expand **FORM**
+  - `[*]` Expand **FORM**
 - `(` `defn` `even?` `[` `x` `]` `(` `<id>` **ARG***`)` `)`
   - <ID>:zero?
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` **ARG***`)` `)`
-  - Expand [*] **ARG** -> **FORM**
+  - Expand `[*]` **ARG** -> **FORM**
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` **FORM** **ARG***`)` `)`
-  - [#] Stop multielement **ARG***
+  - `[#]` Stop multielement **ARG***
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` **FORM** `)` `)`
-  - Expand [*] **FORM**
+  - Expand `[*]` **FORM**
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` `(` `<id>` **ARG*** `)` `)` `)`
   - <ID>:mod
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` `(` `mod` **ARG*** `)` `)` `)`
-  - Expand [*] **ARG** -> `<id>`
+  - Expand `[*]` **ARG** -> `<id>`
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` `(` `mod` `<id>` **ARG*** `)` `)` `)`
-  - Expand [*] **ARG** -> `<num>`
+  - Expand `[*]` **ARG** -> `<num>`
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` `(` `mod` `<id>` `<num>` **ARG*** `)` `)` `)`
-  - [#] Stop multielement **ARG***
+  - `[#]` Stop multielement **ARG***
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` `(` `mod` `<id>` `<num>` `)` `)` `)`
   - <ID>:x
   - <NUM>:2
 - `(` `defn` `even?` `[` `x` `]` `(` `zero?` `(` `mod` `x` `2` `)` `)` `)`
 
-Constructions is done!
+Construction is done!
 
 ## Destruction
 
