@@ -25,9 +25,9 @@ Rules based on a simple grammar contain
 - **Non-terminal** symbols are bold and can be expanded using grammar.
 - `Terminal` symbols can't be expanded.
 
-1. **F** -> `(` `defn` `<id>` `[` `<id>`* `]` **FORM** `)`
-2. **FORM** -> `(` `<id>` **ARG*** `)`
-3. **ARG** -> `<id>` | `<num>` | **FORM**
+1. **F** -> `(` `defn` `<id>` `[` `<id>`* `]` **S-EXP** * `)`
+2. **S-EXP** -> **FORM** | `<id>` | `<num>`
+3. **FORM** -> `(` **S-EXP** * `)`
 
 ## Cards
 
