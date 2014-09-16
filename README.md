@@ -114,6 +114,6 @@ Construction is done!
                   opponent (and of course destructive cards can be used
                   on them). Example: LL3-parser - each turn player takes
                   3 cards (instead of 2), chooses 2 to keep and puts the
-                  the other one back on the deck, face down.
+                  other one back on the deck, face down.
 
 - **Roles**/**Classes** - same as abilities but are permanent during game.
