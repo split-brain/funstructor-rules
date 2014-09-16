@@ -31,7 +31,12 @@ Rules based on a simple grammar contain
 
 ## Cards
 
-* **Terminals**
+In general playing cards can be divided into two types: constructive and
+destructive. Constructive cards are used to build on your own function.
+Destructive cards are used to destroy or affect in some nasty way
+elements in yours or your opponent's function or hand.
+
+* **Constructive**
   - LPAREN `(`
   - RPAREN `)`
   - DEFN `defn`
@@ -39,12 +44,18 @@ Rules based on a simple grammar contain
   - LSQUARE `[`
   - RSQUARE `]`
   - `<num>` (after playing this card you can type the int number)
-* **Non-terminal**
   - `[*]` (expand non-terminal using the rule)
-  - `[-]` (collapse non-terminal)
-  - `[.]` (delete terminal)
-  - `[X]` (delete non-terminal)
   - `[#]` (stop multielement)
+
+* **Destructive**
+  - Collapse (fold) non-terminal
+  - Delete terminal
+  - Delete non-terminal
+  - Delete card in hand
+  - Rename `<id>`
+  - Replace `<num>`
+  - Reverse all parentheses in hand
+
 
 ## Example
 
@@ -95,7 +106,14 @@ function using following rules step-by-step
 
 Construction is done!
 
-## Destruction
 
-Important part of the game that you not only can build your own function,
-you can also destroy some elements in your opponent's function.
+## Gameplay ideas
+
+- **Abilities** - cards that affect player's game process in some way.
+                  They are placed near player and can be viewed by his
+                  opponent (and of course destructive cards can be used
+                  on them). Example: LL3-parser - each turn player takes
+                  3 cards (instead of 2), chooses 2 to keep and puts the
+                  the other one back on the deck, face down.
+
+- **Roles**/**Classes** - same as abilities but are permanent during game.
