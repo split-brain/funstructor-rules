@@ -11,6 +11,11 @@ each player draws 6 cards. Also, each player assigned a random
 simple clojure function implementation but the
 opponent doesn't know what the function is.
 
+Each turn each player draw a card, and third card is shown to both players,
+simple random choose its owner.
+
+Investigate third card as a game card, played by computer.
+
 Both players have their own board where they are constructing function.
 Both boards are visible to both players.
 
