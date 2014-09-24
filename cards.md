@@ -90,7 +90,6 @@ virus blocks place for terminal)
 04. **Special: Duel** (put left paren, square or curly, opponent forced to close it with right paren,
 then you forced to put left paren, who wins get all parens as terminals back to hand)
 
-
 # Future Releases/Outdated (TODO revisit)
 
 05. **Terminal: LCURLY**
@@ -113,6 +112,7 @@ then you forced to put left paren, who wins get all parens as terminals back to 
 01. **Duration: Emoji Generation** (your parens transformed to smiles for 5 turns,
 no need to remove them, just visual effect)
 05. **Duration: Friends** (lasts 5 turns, if you put terminal automatically fill both neighbour terminals) (outdated)
+02. **Duration: Speed** (last 5 turns, each player is forced to take a move in 15 seconds)
 
 02. **Hidden: Postponed Terminal** (use this card and one terminal, on next turn you able to play this terminal for free)
 
@@ -120,12 +120,3 @@ no need to remove them, just visual effect)
 04. **Special: ASCII** (replace all symbols to ascii values for 10 turns, all terminals are numbers)
 
 > Powered by brainstorm
-
-
-;;
-
-- 1 minute for turn
-- Cards after both ended their turns
-- Third card visible and random
-- Really? only for word ids
-- Take two cards
