@@ -108,6 +108,7 @@ then you forced to put left paren, who wins get all parens as terminals back to 
 
 11. **Action: Reverse Time** (discard opponent last actions)
 14. **Action: Reveal** (all opponent active hidden actions are discarded)
+15. **Action: Scheme Attack** (all opponent's square brackets in hand are transformed to parenheses)
 
 01. **Duration: Emoji Generation** (your parens transformed to smiles for 5 turns,
 no need to remove them, just visual effect)
@@ -118,5 +119,8 @@ no need to remove them, just visual effect)
 
 03. **Special: Bytecode** (replace function with its bytecode for 10 turns, though you can construct bytecode)
 04. **Special: ASCII** (replace all symbols to ascii values for 10 turns, all terminals are numbers)
+05. **Special: Hot Swap** (swap function with your opponent)
+06. **Special: Duplicate** (select terminal on board and get 5 copies of it)
+07. **Special: Rainbow Nuke** (you have 5 turns, you must use cards of all types terminal, mutator, duration, action and hidden. If you used cards of all types destroy all terminals from your opponent's function)
 
 > Powered by brainstorm
